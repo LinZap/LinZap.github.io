@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+	$(function(){
+		$('.q').css('color', '#99CC33');
+		$('.n').css('color', '#FF6666');
+		$('.y').css('color', '#99CCFF');
+		$('.s').css('color', '#FFCC33');
+	})
+</script>
+</head>
+<body>
+
+<div id="c">
+	<h1 class="ctitle">DOM簡介</h1>
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+	<h2 class="ctitle2">Document Object Model</h2>
+	<p class="ctxt"> DOM (Document Object Model) <br>DOM為HTML及XML文件之標準文件模型，為了HTML及XML文件處理之需，W3C制定DOM(Document Object Model)之規格標準，規範一個HTML或XML文件為一個DOM tree，HTML或XML文件中每個元素(標籤)，每個元素之屬性及文字內容均是此DOM tree之node<br><br>
+	DOM標準制定一套標準之物件集合體，規範一個HTML或XML文件中各物件(標籤)含那些標準的屬性(或物件)，含那些標準的methods，有那些標準的事件(event)可被觸發，這些規範形成一套標準API(Application Programming Interface)，一個程式可透過DOM API 讀取或更改一個HTML或XML文件中之元素(標籤)，元素屬性之內容等<br><br>
+	DOM規格標準是跨平台跨語言，目前能支援DOM之程式語言已有許多，應用於client端之Javascript是最常見支援DOM之程式語言，Javascript程式可透過DOM API控制及處理一個HTML文件。有了DOM標準規格，處理HTML或XML文件之程式，才能具跨平台之優點。
+	</p>
+
+	<h2 class="ctitle2">DOM Tree</h2>
+	<p class="ctxt">以下為一個DOM Tree圖 與其對應的 HTML Code</p><br>
+
+	<img class="cimg" src="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/Javascript/data/DOM%20Objects%20Example/methods/method1/dom-ex.jpg">
+
+	<div class="ccode">
+
+		&lt;<span class="n">html</span>&gt;<br><br>
+		&lt;<span class="n">head</span>&gt;<br><br>
+		&lt;<span class="n">title</span>>A Simple page&lt;/<span class="n">title</span>&gt;<br><br>
+		&lt;/<span class="n">head</span>&gt;<br>
+		&lt;<span class="n">body</span>&gt;<br><br>
+		&lt;<span class="n">a</span> <span class="q">href</span>="<span class="s">http://turtle.ee.ncku.edu.tw/</span>"&gt;Link to NCKU site&lt;/<span class="n">a</span>&gt;<br><br>
+		&lt;<span class="n">div</span>&gt;<br><br>
+		&lt;<span class="n">p</span>&gt;This is a picture of my university&lt;/<span class="n">p</span>&gt;<br><br>
+		&lt;<span class="n">img</span> <span class="q">src</span>="<span class="s">cjcu.jpg</span>"&gt;<br><br>
+		&lt;/<span class="n">div</span>&gt;<br><br>
+		&lt;/<span class="n">body</span>&gt;<br>
+		&lt;/<span class="n">html</span>&gt;
+
+	</div>
+
+	<br><br><br><br><br>
+
+	
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<div id="c">
+	
+	<h1 class="ctitle">手機螢幕滑動</h1>
+
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+	
+
+	<h2 class="ctitle2">Demo：</h2>
+	<p class="ctxt">您可以看到藉由 CSS3 transition 達到手機滑動的效果</p>
+	<div class="cdemo">	
+	
+	<style type="text/css">
+	.demo{
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.demo-phone{
+		width: 280px;
+		height: 400px;
+		background-color: #222;
+		border-radius: 10px;
+		padding-top: 30px;
+	}
+	.demo-view{
+		width: 240px;
+		height: 330px;
+		background-color: #444;
+		border-radius: 5px;
+		border: solid 1px #333;
+		overflow: hidden;
+	}
+	.demo-btn{
+		margin-top: 10px;
+		width: 40px;
+		height: 30px;
+		border-radius: 25px;
+		background-color: #303030;
+		padding-top: 7px;
+	}
+	.demo-inbtn{
+		width: 20px;
+		height: 20px;
+		border: solid 1px #444;
+	}
+	.demo-imgbox{
+		margin-top: 25px;
+		width: 1300px;
+		height: 300px;
+		vertical-align: middle;
+		position: relative;
+		transition:  0.5s;
+		-webkit-transition: left 0.5s; /* Safari */
+	}
+	.demo-imgbox:before{
+		content: '';
+		display: inline-block;
+		height: 100%;
+		width: 0px;
+		vertical-align: middle;
+	}
+
+	.demo-img{
+		width: 240px;
+		height: auto;
+		vertical-align: middle;
+		display: inline-block;
+	}
+	</style>
+	<script>
+
+		$(function(){
+
+			var box=$('.demo-imgbox'),i=0;
+
+			if (typeof box_interval != 'undefined') clearInterval(box_interval);
+			
+			var box_interval = setInterval(function(){
+
+				if( $('.demo-img').length-1 == i ){ 
+					box.css('left', '0px');
+					i=0;
+				}
+				else{
+					box.css('left', '-=240px');
+					i++;
+				}
+
+			},800);
+
+
+		});
+	</script>
+
+	
+	<div class="demo demo-phone">
+		<div class="demo demo-view">
+			
+			<div class="demo-imgbox"><!-- 
+			 --><img src="img/demo1.png" class="demo-img"><!-- 
+			 --><img src="img/demo2.png" class="demo-img"><!-- 
+			 --><img src="img/demo3.png" class="demo-img"><!-- 
+			 --><img src="img/demo4.png" class="demo-img"><!-- 
+			 --><img src="img/demo5.png" class="demo-img">
+			</div>
+
+		</div>
+		<div class="demo demo-btn">
+			<div class="demo demo-inbtn"></div>
+		</div>
+	</div>
+	
+	</div>
+	<br>
+
+	<h2 class="ctitle2">原始碼：</h2>
+	<p class="ctxt">你可以點選 HTML 、 CSS 或是 JacaScripct 來看到完整的程式碼。</p>
+	<br>
+	<iframe width="100%" height="400" src="http://jsfiddle.net/ZapLin/4dmLM/1/embedded/html,css,js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+	
+
+	<br><br><br><br><br><br>
+
+</body>
+</html>

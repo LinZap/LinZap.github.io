@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<div id="c">
+	
+	<h1 class="ctitle">純 CSS 對話氣泡</h1>
+
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+	
+
+	<h2 class="ctitle2">Demo：</h2>
+	<p class="ctxt">在 CSS3 尚未普及之前，若要呈現「對話氣泡」樣式，往往只能使用圖片搭配 div 作為解決方案，缺點就是：一但圖片被放大或是未來需要修改樣式時，會變得十分麻煩。透過原生 CSS3 border 的做法，可以輕鬆解決這樣的問題。</p>
+	
+	<div class="cdemo">
+	<style type="text/css">
+	.demo-bubble 
+	{
+	position: relative;
+	width: 250px;
+	height: 70px;
+	padding: 10px;
+	background: #99CCCC;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	}
+
+	.demo-bubble:after 
+	{
+	content: "";
+	position: absolute;
+	bottom: -20px;
+	left: 140px;
+	border-style: solid;
+
+	/* 上 右 下 左 */
+	border-width:  20px 10px 0px 10px;
+	/* transparent 使顏色變為透明 */
+	border-color: #99CCCC transparent transparent transparent;
+
+	display: block;
+	width: 0;
+	z-index: 1;
+	}
+	</style>
+	<div class='demo-bubble'>我是純 CSS 對話框</div><br>
+
+	</div>
+
+
+	<br>
+
+	<h2 class="ctitle2">原始碼：</h2>
+	<p class="ctxt">你可以點選 HTML 或是 CSS 來看到完整的程式碼。</p>
+	<br>
+	<!-- iframe -->
+	<iframe width="100%" height="400" src="http://jsfiddle.net/ZapLin/Q2R9N/1/embedded/html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+	<br><br><br><br><br><br>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="c">
+	<h1 class="ctitle">動態網頁內容</h1>
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+	<h2 class="ctitle2">動態網頁</h2>
+	<h3 class="ctitle3">Server端</h3>
+	<p class="ctxt">CGI，ASP，JSP，PHP技術產生之網頁內容</p>
+	<h3 class="ctitle3">Client端</h3>
+	<p class="ctxt">JavaScript，DOM,  Flash等技術產生之網頁內容可稱為動態內容</p>
+	
+	<br><br>
+	<p class="ctxt">基本上, 每次請求Server端動態網頁時,需自該Web Server請求該網頁,因此將Server端動態網頁存在Cache(如local disk 或 Web proxy server)中是無意義的.但將Client端動態網頁存在Cache中是有意義的.</p>
+
+
+	<h2 class="ctitle2">相關範例</h2>
+	<ul class="clist">
+	<li>Google serach (由Serve端程式產生網頁內容)</li>
+	<li>高鐵訂票</li>
+	<li>醫院掛號</li>
+	<li><a href="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/Web%20Architecture/data/What%20are%20dynamic%20Web%20contents/methods/method1/SimpleAlarm.htm" target="_blank">利用Javascript 及 DOM 實現簡單鬧鐘</a></li>
+	</ul>
+
+	<br><br>
+	
+</div>
+
+</body>
+</html>

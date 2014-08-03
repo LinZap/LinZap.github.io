@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	$(function(){
+		// 綠 G
+		$('.q').css('color','#99CC33');
+		// 紅 R
+		$('.n').css('color','#FF6666');
+		// 藍 B
+		$('.b').css('color','#66CCCC');
+		// 黃
+		$('.y').css('color','#FFCC00');
+		// 灰
+		$('.g').css('color','#999');
+		// 紫
+		$('.p').css('color','#CC99CC');
+	});
+</script>
+</head>
+<body>
+<div id="c">
+	<h1 class="ctitle">動態改變外貌</h1>
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+	<h2 class="ctitle2">簡介</h2>
+	<p class="ctxt">
+		當網頁需要藉由使用者透過某些操作後，改變網頁原先設定的樣式時，我們可以利用撰寫 JavaScript 程式來達到效果，下面將展現幾個基本案例。
+	</p>
+
+	<h2 class="ctitle2">改變文字樣式</h2>
+	<p class="ctxt">點擊按鈕後，改變文字呈現的樣式</p>
+	<h3 class="ctitle3">Demo：</h3>
+	<div class="cdemo">
+		<script>
+			function dy_change_font(){
+			var df = document.getElementById('dyfont').style;
+			df.fontFamily = '微軟正黑體';
+			df.fontWeight = 'bolder';
+			df.color ='red';
+		}</script>
+		<span id="dyfont">Hello World！！</span>
+		<button onclick="dy_change_font()" style="margin-left:10px;width:60px; height:28px;">Click</button>
+	</div>
+	<h3 class="ctitle3">原始碼：</h3>
+	<div class="ccode">
+
+		&lt;<span class='n'>script</span>&gt;<br>
+			<span class='b'>function</span> <span class='q'>dy_change_font</span>(){<br>
+			<span class='b'>var</span> df = <span class='b'>document</span>.<span class='b'>getElementById</span>('<span class='y'>dyfont</span>').<span class='b'>style</span>;<br>
+			df.<span class='b'>fontFamily</span> = '<span class='y'>微軟正黑體</span>';<br>
+			df.<span class='b'>fontWeight</span> = '<span class='y'>bolder</span>';<br>
+			df.<span class='b'>color</span> ='<span class='y'>red</span>';<br>
+		}<br>&lt;/<span class='n'>script</span>&gt;<br><br>
+		&lt;<span class='n'>span</span> <span class='q'>id</span>="<span class='y'>dyfont</span>"&gt;Hello World！！&lt;/<span class='n'>span</span>&gt;<br>
+		&lt;<span class='n'>button</span> <span class='q'>onclick</span>="<span class='y'>dy_change_font()</span>"&gt;Click&lt;/<span class='n'>button</span>&gt;<br>
+
+	</div>
+
+
+
+	<br><br>
+	<h2 class="ctitle2">利用 CSS3 產生補間動畫</h2>
+	<p class="ctxt">除了一般的改變元素外觀外，配合 CSS3 Transitions，更可呈現補間動畫的效果<br><br>首先，在畫面上建立一個 div 區塊，設定其基本外觀與 transition  並指定作用於 transform 改變時，<br>瀏覽器會花費 1 秒做出補間動畫效果。<br><br>
+	再來，撰寫點擊後欲執行的功能。我們利用 .style 屬性來改變該物件外觀，transform 的 rotateY 可以進行水平翻轉。<br><br>
+	最後，為了確保主流瀏覽器皆能正確執行，我們需要額外加上 -webkit- 的 CSS 宣告，包含Javascript的部分亦然。<br>
+	</p>
+	<h3 class="ctitle3">Demo：</h3>
+	<div class="cdemo">
+		<style type="text/css">
+		#dy_tion{
+			width: 65px;
+			height: 70px;
+			font-size: 28px;
+			background-color: #eae;
+			transition: transform 1s;
+			-webkit-transition: -webkit-transform 1s;
+		}</style>
+		<script>
+		function dy_change_css(){
+			var tion = document.getElementById('dy_tion').style;
+			tion.webkitTransform='rotateY(-135deg)';
+			tion.transform='rotateY(-135deg)';}
+		</script>
+		<div id="dy_tion" onclick="dy_change_css()">點我翻轉</div>
+	</div>
+
+	<h3 class="ctitle3">原始碼：</h3>
+		
+	<div class="ccode">
+
+		&lt;<span class='n'>style</span> <span class='q'>type</span>="<span class='y'>text/css</span>"&gt;<br>
+		<span class='q'>#dy_tion</span>{<br>
+			<span class='b'>width</span> : <span class='p'>65</span><span class='n'>px</span>;<br>
+			<span class='b'>height</span> : <span class='p'>70</span><span class='n'>px</span>;<br>
+			<span class='b'>font-size</span> : <span class='p'>28</span><span class='n'>px</span>;<br>
+			<span class='b'>background-color</span> : <span class='p'>#eae</span>;<br>
+			<span class='b'>transition</span> : transform <span class='p'>1</span><span class='n'>s</span>;<br>
+			<span class='b'>-webkit-transition</span> : -webkit-transform <span class='p'>1</span><span class='n'>s</span>;<br>
+		}<br>
+		&lt;/<span class='n'>style</span>&gt;<br><br>
+		&lt;<span class='n'>script</span>&gt;<br>
+		<span class='b'>function</span> <span class='q'>dy_change_css</span>(){<br>
+			<span class='b'>var</span> tion = <span class='b'>document</span>.<span class='b'>getElementById</span>('<span class='y'>dy_tion</span>').<span class='b'>style</span>;<br>
+			tion.<span class='b'>webkitTransform</span> = '<span class='y'>rotateY(-135deg)</span>';<br>
+			tion.<span class='b'>transform</span> = '<span class='y'>rotateY(-135deg)</span>';<br>
+		}<br>
+		&lt;/<span class='n'>script</span>&gt;<br><br>
+		&lt;<span class='n'>div</span> <span class='q'>id</span>="<span class='y'>dy_tion</span>" <span class='q'>onclick</span>="<span class='y'>dy_change_css()</span>"&gt;點我翻轉&lt;/<span class='n'>div</span>&gt;<br>
+
+	</div>
+
+
+
+
+	<br>
+	<h2 class="ctitle2">其他範例</h2>
+	<ul class="clist">
+	<li><a href="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/DHTML_and_DOM/data/Startup_Examples/methods/method6/CSS1.htm" target="_blank">指標覆蓋，改變樣式呈現 1</a></li>
+	<li><a href="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/DHTML_and_DOM/data/Startup_Examples/methods/method6/CSS2.htm" target="_blank">指標覆蓋，改變樣式呈現 2</a></li>
+	<li><a href="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/DHTML_and_DOM/data/Startup_Examples/methods/method6/CSS3.htm" target="_blank">指標覆蓋，改變樣式呈現 3</a></li>
+	</ul>
+	<br><br><br><br>
+
+
+</div>
+</body>
+</html>

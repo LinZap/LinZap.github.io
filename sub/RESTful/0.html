@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="c">
+
+	<h1 class="ctitle">何謂REST</h1>
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+	<h2 class="ctitle2">簡介</h2>
+	
+	<p class="ctxt">含狀態傳輸（英文：Representational State Transfer，簡稱REST）<br><br>是Roy Fielding博士在2000年他的博士論文中提出來的一種軟體架構風格<br><br>
+	目前在三種主流的Web服務實現方案中，因為REST模式與複雜的SOAP和XML-RPC相比更加簡潔，越來越多的web服務開始採用REST風格設計和實現<br>
+	例如，Amazon.com提供接近REST風格的Web服務進行圖書查找；雅虎提供的Web服務也是REST風格的</p>
+
+	<h2 class="ctitle2">要點及標準</h2>
+	<ul class="clist">
+		<li>資源是由URI來指定</li>
+		<li>對資源的操作包括獲取、創建、修改和刪除資源，這些操作正好對應HTTP協議提供的GET、POST、PUT和DELETE方法</li>
+		<li>通過操作資源的表現形式來操作資源</li>
+		<li>資源的表現形式則是XML或者HTML，取決於讀者是機器還是人，是消費web服務的客戶軟體還是web瀏覽器。當然也可以是任何其他的格式</li>
+	</ul>
+
+	<h2 class="ctitle2">REST的要求</h2>
+	<ul class="clist">
+		<li>客戶端和伺服器結構</li>
+		<li>連接協議具有無狀態性</li>
+		<li>能夠利用Cache機制增進性能</li>
+		<li>層次化的系統</li>
+		<li>隨需代碼 - Javascript （可選）</li>
+	</ul>
+
+	<h2 class="ctitle2">本文參考自</h2>
+	<p class="ctxt"><a href="http://zh.wikipedia.org/wiki/REST">REST wikipedia</a></p>
+
+	<br>
+	<br>
+	<br>
+	<br>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<div id="c">
+	
+	<h1 class="ctitle">Canvas 圓形進度條</h1>
+
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+	
+
+	<h2 class="ctitle2">Demo：</h2>
+	<p class="ctxt">在繪製圓形進度條時，若使用一般的HTML Tag是非常難以做到的，透過 Canvas 元素我們可以利用瀏覽器原生的繪圖能力，達到我們需要的效果。</p>
+	
+	<div class="cdemo">
+		<style type="text/css">
+		#myCanvas{
+		  border: solid 1px #CCC;
+		  display: block;
+		  margin: auto;
+		}
+		</style>
+
+		<script>
+			var c=document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+
+			c.width = 200;
+			c.height = 200;
+
+			var angle= 100;
+			var begin = 0 ;
+
+			if (typeof timer != 'undefined') clearInterval(timer);
+
+			timer = setInterval(draw, 40);
+
+			function draw() {
+
+				if(begin>angle){
+					begin = 0;
+				}
+				else{
+				ctx.clearRect(0, 0, 200, 200);
+				ctx.beginPath();
+
+				ctx.strokeStyle="#00ffff";
+				ctx.lineWidth=30;
+
+				ctx.arc(100,100,50,0, Math.PI*(0.02*begin) );
+				ctx.stroke();
+				begin++;
+				}
+			}
+		</script>
+
+		<canvas id='myCanvas'></canvas>
+	</div>
+
+
+	<br>
+
+	<h2 class="ctitle2">原始碼：</h2>
+	<p class="ctxt">你可以點選 HTML 、 CSS 或是 JacaScripct 來看到完整的程式碼。</p>
+	<br>
+	<!-- iframe -->
+	<iframe width="100%" height="400" src="http://jsfiddle.net/ZapLin/dhsFj/embedded/html,css,js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+	<br><br><br><br><br><br>
+
+</body>
+</html>

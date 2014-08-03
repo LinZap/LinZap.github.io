@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<div id="c">
+<h1 class="ctitle">RESTful Web API</h1>
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+
+	<h2 class="ctitle2">簡介</h2>
+	<p class="ctxt">含狀態傳輸的 Web 服務（也稱為 RESTful Web API）是一個使用HTTP並遵循REST原則的Web服務。它從以下三個方面資源進行定義</p><br>
+
+	<ul class="clist">
+	<li>直觀簡短的資源地址：URI，比如：http://example.com/resources/</li>
+	<li>傳輸的資源：Web服務接受與返回的網際網路媒體類型，比如：JSON，XML ，YAML 等</li>
+	<li>對資源的操作：Web服務在該資源上所支持的一系列請求方法(比如：POST，GET，PUT或DELETE)</li>
+	</ul>
+
+	<h2 class="ctitle2">實際案例</h2>
+	<p class="ctxt">REST風格：從URI直覺地看出，請求所有特價中的產品</p>
+	<div class="ccode">http://www.store.com/products/sale</div>
+	<p class="ctxt">REST風格：從URI直覺地看出，請求所有新上市的產品</p>
+	<div class="ccode">http://www.store.com/products/new</div>
+	<p class="ctxt">返回的資源可能是 JSON物件、字串、HTML Code 或是 XML，依照不同應用的需求而定。</p>
+
+	<h2 class="ctitle2">REST的優點</h2>
+	<ul class="clist">
+		<li>可更高效利用緩存來提高響應速度</li>
+		<li>通訊本身的無狀態性可以讓不同的伺服器的處理一系列請求中的不同請求，提高伺服器的擴展性</li>
+		<li>瀏覽器即可作為客戶端，簡化軟體需求</li>
+		<li>相對於其他疊加在HTTP協議之上的機制，REST的軟體依賴性更小</li>
+		<li>不需要額外的資源發現機制</li>
+		<li>在軟體技術演進中的長期的兼容性更好</li>
+	</ul>
+
+	<h2 class="ctitle2">本文參考自</h2>
+	<p class="ctxt"><a href="http://zh.wikipedia.org/wiki/REST">REST wikipedia</a></p>
+
+	<br>
+	<br>
+	<br>
+	<br>
+</div>
+
+</body>
+</html>

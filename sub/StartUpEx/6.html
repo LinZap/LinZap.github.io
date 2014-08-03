@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<div id="c">
+	
+	<h1 class="ctitle">轉動的齒輪</h1>
+
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+	
+
+	<h2 class="ctitle2">Demo：</h2>
+	<p class="ctxt">隨著 CSS3 日益普及，以往在網頁上要表現一個動畫效果，我們只能透過 Flash 外掛程式來達到，雖然其不失為一個解決方法，但畢竟不屬於瀏覽器原生的一部分，在效能與安全性上有很多被詬病的地方。如今，我們可以透過 CSS3 的 Animation 來達到如同 Flash 一般的動畫效果，除了在效能與安全性都勝於 Flash 之外在程式的維護與修改也變得更簡單方便了。</p>
+	
+	<div class="cdemo">
+	<style type="text/css">
+	@keyframes myAnimation
+	{
+	    from{
+	        -webkit-transform: rotate(0deg);
+	        transform: rotate(0deg);
+	    }
+	    to{
+	        -webkit-transform: rotate(360deg);
+	        transform: rotate(360deg);
+	    }
+	}
+	@-webkit-keyframes myAnimation {
+	    from{
+	        -webkit-transform: rotate(0deg);
+	        transform: rotate(0deg);
+	    }
+	    to{
+	        -webkit-transform: rotate(360deg);
+	        transform: rotate(360deg);
+	    }
+	}
+
+	@keyframes myAnimation2 {
+	    from{
+	        -webkit-transform: rotate(360deg);
+	        transform: rotate(360deg);
+	    }
+	    to{
+	        -webkit-transform: rotate(0deg);
+	        transform: rotate(0deg);
+	    }
+	}
+	@-webkit-keyframes myAnimation2 {
+	    from{
+	        -webkit-transform: rotate(360deg);
+	        transform: rotate(360deg);
+	    }
+	    to{
+	        -webkit-transform: rotate(0deg);
+	        transform: rotate(0deg);
+	    }
+	}
+	.demo-rotating {
+		display: inline-block;
+	    background-image: url("img/gear1.fw.png");
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    height: 350px;
+	    width: 350px;
+	    animation: myAnimation 3s linear 0s infinite reverse;
+	    -webkit-animation: myAnimation 3s linear 0s infinite reverse; 
+	}
+	.demo-rotating2 {
+		display: inline-block;
+	    background-image: url("img/gear2.fw.png");
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    height: 250px;
+	    width: 250px;
+	    animation: myAnimation2 1.5s linear 0s infinite reverse;
+	    -webkit-animation: myAnimation2 1.5s linear 0s infinite reverse;
+	 }
+	</style>
+
+		<div class="demo-rotating"></div><!--
+	 --><div class="demo-rotating2"></div>
+
+	</div>
+
+
+	<br>
+
+	<h2 class="ctitle2">原始碼：</h2>
+	<p class="ctxt">你可以點選 HTML 或是 CSS 來看到完整的程式碼。</p>
+	<br>
+	<!-- iframe -->
+	<iframe width="100%" height="400" src="http://jsfiddle.net/ZapLin/r9ySG/2/embedded/html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+	<br><br><br><br><br><br>
+
+</body>
+</html>

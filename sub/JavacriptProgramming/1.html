@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	$(function(){
+		$('.q').css('color', '#99CC33');
+		$('.n').css('color', '#FF6666');
+		$('.y').css('color', '#99CCFF');
+		$('.s').css('color', '#FFCC33');
+
+		$('#mcode li').mouseover(function(event) {
+			$(this).css('font-weight', 'bold');
+			var index = $('#mcode li').index( this );
+			$('#code1,#code2,#code3').removeClass('rebgcolor');
+			switch(index) {
+				case 0:$('#code1').addClass('rebgcolor');break;
+				case 1:$('#code2').addClass('rebgcolor');break;
+				case 2:$('#code3').addClass('rebgcolor');break;
+			}
+		}).mouseleave(function(event) {
+			$(this).css('font-weight', 'normal');
+			$('#code1,#code2,#code3').removeClass('rebgcolor');
+		});;
+	})
+</script>
+</head>
+<body>
+
+<div id="c">
+	<h1 class="ctitle">JS簡單範例</h1>
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+	<h2 class="ctitle2">Hello World</h2>
+	<p class="ctxt">以下是一個簡單的JavaScript Hello World</p>
+	<div class="ccode">
+
+		&lt;!DOCTYPE HTML&gt;<br><br>
+		&lt;<span class="n">html</span>&gt;<br>
+		    &lt;<span class="n">head</span>&gt;<br><br>
+		    &lt;<span class="n">title</span>>Hello World&lt;/<span class="n">title</span>&gt;<br><br><br>
+		        &lt;<span class="n">script</span> <span class="q">type</span>="<span class="s">text/javascript</span>"&gt; <br><br>
+		            <span id='code1'><span class="y">document</span>.<span class="y">write</span>("<span class="s">Hello, world!</span>");</span><br><br>
+		            <span id='code2'><span class="y">alert</span>("<span class="s">Hello, world!</span>");</span><br><br>         
+		            <span id='code3'>console.<span class="y">log</span>("<span class="s">Hello, world!</span>");</span><br><br>
+		        &lt;/<span class="n">script</span>&gt;<br><br><br>
+		    &lt;/<span class="n">head</span>&gt;<br><br>
+		    &lt;<span class="n">body</span>&gt;<br>
+				&nbsp;&nbsp;HTML 內文……<br>
+		    &lt;/<span class="n">body</span>&gt;<br><br>
+		&lt;/<span class="n">html</span>&gt; 
+
+	</div><br>
+
+
+	<p class="ctxt">我們由以上的程式碼可以達到3件事 <span class="n">(滑鼠指到上面，可參照程式碼位置)</span></p><br>
+	<ul class="clist" id="mcode">
+	<li>在網頁上印出 Hello, world!</li>
+	<li>在彈出對話框中顯示 Hello, world!</li>
+	<li>在瀏覽器主控台(F12)上印出 Hello, world!</li>
+	</ul>
+
+
+
+	<br><br><br><br><br><br>
+	
+
+	
+	
+</div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	$(function(){
+		$('.q').css('color', '#99CC33');
+		$('.n').css('color', '#FF6666');
+	})
+</script>
+</head>
+<body>
+
+<div id="c">
+	
+	<h1 class="ctitle">查詢字串與表單</h1>
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+
+	<h2 class="ctitle2">簡介</h2>
+	
+	<p class="ctxt">查詢字串 (Query String) 是CGI程式最常使用到的輸入，一個請求的網址中若出現</p>
+	<div class="ccode">
+		http://localhost/program.php<span class="q"> ? </span>var1=value1&amp;var2=value2&amp;var3=value3
+	</div><br>
+
+	<p class="ctxt">其中，" ? " 後面串接的即為 Query String</p>
+	<div class="ccode">
+		var1=value1&amp;var2=value2&amp;var3=value3
+	</div><br>
+
+	<p class="ctxt">query string之型式基本上是幾個變數及每個變數對應之值串接而成 </p>
+	<div class="ccode">
+		<span class="q">var1</span> = value1 &amp;<br><br><span class="q"> var2 </span>
+		= value2 &amp;<br><br><span class="q"> var3</span> = value3
+	</div><br>
+
+
+	<h2 class="ctitle2">HTML表單與 query string</h2>
+	<p class="ctxt">以下表單在送出後，也會組成一串 query string</p>
+	<div class="ccode">
+		&lt;<span class="n">form</span> <span class="q">method</span>="get" <span class="q">action</span>="/cgi-bin/cgiwrap/~tsai/sample.pl"&gt;<br><br>
+		Number A = &lt;<span class="n">input</span> <span class="q">size</span>=3 <span class="q">name</span>=a >&lt;<span class="n">p</span>&gt;<br><br>
+		Number B = &lt;<span class="n">input</span> <span class="q">size</span>=3 <span class="q">name</span>=b >&lt;<span class="n">p</span>&gt;<br><br>
+		Input your name: &lt;<span class="n">input</span> <span class="q">TYPE</span>=text <span class="q">name</span>=username >&lt;<span class="n">p</span>&gt;<br><br>
+		Input the time now: &lt;<span class="n">input</span> <span class="q">TYPE</span>=text <span class="q">name</span>=timein >&lt;<span class="n">p</span>&gt;<br><br>
+		&lt;<span class="n">input</span> <span class="q">type</span>=submit <span class="q">value</span>="multiply"&gt;&lt;<span class="n">p</span>&gt;<br><br>
+		&lt;/<span class="n">form</span>&gt;
+	</div><br>
+
+	<p class="ctxt">輸入一些資料後，組成的query string 如下</p>
+	<div class="ccode">
+		http://turtle.ee.ncku.edu.tw/cgi-bin/cgiwrap/~tsai/sample.pl?a=5&amp;b=4&amp;username=Shang-Rong+Tsai&amp;timein=13%3A15%3A00
+	</div><br>
+	<p class="ctxt">拆解如下</p>
+	<div class="ccode">
+		http://turtle.ee.ncku.edu.tw/cgi-bin/cgiwrap/~tsai/sample.pl?<br><br>
+		a=5&amp;<br><br>
+		b=4&amp;<br><br>
+		username=Shang-Rong+Tsai&amp;<br><br>
+		timein=13%3A15%3A00
+	</div><br>
+
+	<h2 class="ctitle2">HTML表單送出資料的方式</h2>
+	<ul class="clist">
+	<li>GET</li>
+	<li>POST</li>
+	</ul><br>
+	<p class="ctxt">當無設定 &lt;<span class="n">form</span>&gt; 標籤的 method 屬性時，預設為 GET 方法傳遞資料<br><br>藉由將 method 屬性改為 POST 可改變其傳遞方式<br><br>
+	POST與GET的差異在於，POST是browser將query_string置於HTTP請求訊息之body中傳遞，並在HTTP head中以CONTEN-LENGTH:表示query_string之長度，因此 query_string 不會反映在 URL上。</p><br><br>
+
+	<h3 class="ctitle3">GET運作架構圖</h3>
+	<img class="cimg2" src="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/CGI-Common%20Gateway%20Interface/data/Input%20to%20server%20side%20programs%20schemes/methods/method1/cgi_get.jpg">
+	<br><br>
+
+	<h3 class="ctitle3">POST運作架構圖</h3>
+	<img class="cimg2" src="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/CGI-Common%20Gateway%20Interface/data/Input%20to%20server%20side%20programs%20schemes/methods/method1/cgi_post.jpg">
+	<br><br><br>
+
+	<p class="ctxt">在Server端的應用程式之設計者，並不需要很低階較細步的去取得輸入變數之資料，而可以利用現成各種server端之程式庫，以呼叫副程式或物件的方式取得輸入之變數資料<br><br>
+	例如，用Perl程式庫以param("a")之函數呼叫取得 &lt;<span class="n">form</span>&gt; 中元素"a"之輸入值。<br><br>
+	PHP、 JSP與ASP .NET各有其程式庫可用，以取得輸入之變數資料。對Web server端應用程式產生之輸出，Web server端應用程式之平台或執行系統亦會自動轉交給Web server，以回應給Web Clients。
+	</p><br>
+
+
+	<h2 class="ctitle2">相關連結</h2>
+	<ul class="clist">
+	<li><a href="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/CGI-Common%20Gateway%20Interface/data/Simple%20Multiplier%20PHP%20example/methods/method1/php-get.htm" target="_blink">體驗 GET 的範例</a></li>
+	<li><a href="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/CGI-Common%20Gateway%20Interface/data/Simple%20Multiplier%20PHP%20example/methods/method1/php-post.htm" target="_blink">體驗 POST 的範例</a></li>
+	<li><a href="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/CGI-Common%20Gateway%20Interface/data/Web%20%E7%B7%9A%E4%B8%8A%E8%80%83%E8%A9%A6/methods/method1/object_method.htm" target="_blink">實際的表單範例</a></li>
+	</ul>
+
+	
+	<br>
+	<br>
+	<br>
+</div>
+</body>
+</html>

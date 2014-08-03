@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+$(function(){
+$('.ccode span').css('color', '#FF6666');
+});	
+</script>
+</head>
+<body>
+	<div id="c">
+	<h1 class="ctitle">HTML語言的結構</h1>
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+	<h2 class="ctitle2">HTML基本結構</h2>
+	<div class="ccode">
+	&lt;<span>html</span>&gt;<br><br>
+	&lt;<span>head</span>&gt; &lt;/<span>head</span>&gt;<br><br>
+	&lt;<span>body</span>&gt;<br><br>
+	網頁內容<br><br>
+	&lt;/<span>body</span>&gt;<br><br>
+	&lt;/<span>html</span>&gt;<br>
+	</div>
+
+	<br>
+	<p class="ctxt">HTML(Hypertext Markup Language)是一個標籤語言(markup language)，用來描述文件如何被展現，一個HTML標籤通常包含標籤名稱，屬性(Attributes, 標籤相關的參數)及標籤之文字內容</p>
+	<br>
+
+	<h2 class="ctitle2">相關連結</h2>
+	<ul class="clist"><li><a href="http://www.w3schools.com/tags/tag_html.asp" target="_blank">HTML所有標籤</a></li></ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+$(function(){
+	$('.ccode span').css('color', '#CC99CC');
+});
+</script>
+</head>
+<body>
+
+<div id="c">
+	<h1 class="ctitle">CGI環境變數</h1>
+
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+
+	<h2 class="ctitle2">簡介</h2>
+
+	<p class="ctxt">CGI environment variables是CGI程式(某些CGI environment variables在其他server端技術亦是存在的)執行時所處的環境資訊，是程式執行時重要的輸入資料，CGI environment variables共可分成三種類別</p>
+
+	<h3 class="ctitle3">user</h3>
+	<p class="ctxt">此類環境變數記錄有關browser之資訊，例如HTTP_USER_AGENT記錄使用者使用什麼瀏覽器</p>
+
+	<h3 class="ctitle3">server</h3>
+	<p class="ctxt">此類環境變數記錄有關Web server之資訊，例如SERVER_SOFTWARE記錄伺服器使用的軟體</p>
+
+	<h3 class="ctitle3">request</h3>
+	<p class="ctxt">此類環境變數記錄有關請求之資訊，例如QUERY_STRING記錄要送給Server之查詢字串</p>
+
+
+
+	<br>
+
+
+
+
+	<h2 class="ctitle2">撰寫一隻取得 CGI 環境變數的程式</h2>
+	<p class="ctxt">使用Perl</p>
+	<div class="ccode">
+		#!/usr/local/bin/perl<br><br>
+		<span>print</span> "Content-type:text/html \n\n";<br>
+		<br>
+		<span>foreach</span> $var (keys(%ENV)){<br>
+		<br>
+		<span>print</span> "環境變數 $var內容是$ENV{$var} &lt;p&gt; \n"<br><br>
+		}<br>
+		<br>
+		<span>print</span> "你的 IP ADDRESS 是 $ENV{'REMOTE_ADDR'} &lt;p&gt; \n";<br>
+	</div>
+	<p class="ctxt">執行結果：<a href="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/CGI-Common%20Gateway%20Interface/data/Show%20Environment%20Variables/methods/method1/object_method.htm" target="_blank">點我觀看</a></p><br>
+
+
+
+
+
+	<h2 class="ctitle2">相關連結</h2>
+	<ul class="clist">
+	<li><a href="http://sr732.hchs.hc.edu.tw/html/cgienv.htm" target="_blink">傳遞給 CGI 的所有環境變數</a></li>
+	<li><a href="http://ind.ntou.edu.tw/~dada/cgi/CGIprog.htm" target="_blink">CGI 程式入門</a></li>
+	<li><a href="http://ccckmit.wikidot.com/cgi:env" target="_blink">用 C 語言取得 CGI 環境變數</a></li>
+	</ul>
+
+	<br>
+	
+</div>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	$(function(){
+		// 綠 G
+		$('.q').css('color', '#99CC33');
+		// 紅 R
+		$('.n').css('color', '#FF6666');
+		// 藍 B
+		$('.b').css('color','#66CCCC');
+		// 黃
+		$('.y').css('color', '#FFCC00');
+		// 灰
+		$('.g').css('color', '#999');
+
+		$('#fun-dychcx1,#fun-dychcx').mouseenter(function(event) {
+			$('#fun-dychcx1, #fun-dychcx').addClass('cdemo-focus');			
+		}).mouseleave(function(event) {
+			$('#fun-dychcx1, #fun-dychcx').removeClass('cdemo-focus');
+		});
+
+		$('#fun-sum1, #fun-sum, #fun-sum2').mouseenter(function(event) {
+			$('#fun-sum1, #fun-sum2, #fun-sum').addClass('cdemo-focus');
+			
+		}).mouseleave(function(event) {
+			$('#fun-sum1, #fun-sum2, #fun-sum').removeClass('cdemo-focus');
+		});
+
+	})
+</script>
+</head>
+<body>
+
+<div id="c">
+	
+	<h1 class="ctitle">動態改變內容</h1>
+
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+	<h2 class="ctitle2">簡介</h2>
+	<p class="ctxt">
+		當網頁需藉由使用者某些操作後，才顯示出對應的資料時，便需要動態地改變網頁內容。<br>
+		而這樣的功能通常藉由撰寫JavaScript程式來達到效果。，下面將展現幾個基本案例。
+	</p>
+	
+	<h2 class="ctitle2">改變文字內容</h2>
+	<p class="ctxt">點擊按鈕後，改變文字顯示內容</p>
+
+	<h3 class="ctitle3">Demo：</h3>
+	<div class="cdemo">
+		<script type="text/javascript">function dy_change_cxt(){document.getElementById('dycxt').innerHTML='已經點了！'; }</script>
+		<span id="dycxt"> 還沒點！</span>
+		<button onclick="dy_change_cxt()" style="margin-left:10px;width:60px; height:28px;">Click</button>
+	</div>
+	<h3 class="ctitle3">原始碼：</h3>
+	<div class="ccode">
+		&lt;<span class='n'>script</span>&gt;<br>
+		<div id='fun-dychcx'><span class='b'>function</span> <span class='n'>dy_change_cxt</span>(){<br>
+			<span class='g'>// innerHTML 可以插入指定內容</span><br>
+			<span class='b'>document</span>.<span class='b'>getElementById</span>('<span class='y'>dycxt</span>').innerHTML="<span class='y'>已經點了！</span>"; <br>
+		}</div>
+		&lt;/<span class='n'>script</span>&gt;<br><br>
+		&lt;<span class='n'>span</span> <span class='q'>id</span>="<span class='y'>dycxt</span>"&gt; 還沒點！&lt;/<span class='n'>span</span>&gt;<br>
+		&lt;<span class='n'>button</span> <span class='q'>onclick</span>="<span class='y' id="fun-dychcx1">dy_change_cxt()</span>"&gt; Click &lt;/<span class='n'>button</span>&gt;<br>
+	</div>
+	<br><br>
+	<h2 class="ctitle2">兩數相加</h2>
+	<p class="ctxt">輸入兩個整數，後方印出答案<br>
+	首先，先在畫面上新増 2 個 input 元素，並將其註冊 onchange 傾聽事件<br>
+	接下來，撰寫事件觸發後相加的功能，利用 .value 取得 input 元素的數值<br>
+	最後，使用 .innerHTML 將結果印到畫面中。
+	</p>
+	<h3 class="ctitle3">Demo：</h3>
+	<div class="cdemo">
+		<script>
+		function sum(){ document.getElementById('dy_ans').innerHTML = 
+		parseInt(document.getElementById('dy_num1').value) + 
+		parseInt(document.getElementById('dy_num2').value) ;
+		}
+		</script>
+		<input type="number" value="0" id="dy_num1" onchange="sum()" style="width:60px;height:29px;"> <b>+</b> <input type="number" value="0" id="dy_num2" onchange="sum()" style="width:60px;height:29px;"> <b>= <span id="dy_ans">0</span></b>
+	</div>
+	<h3 class="ctitle3">原始碼：</h3>
+	<div class="ccode">
+		
+		&lt;<span class='n'>script</span>&gt;<br>
+		<div id="fun-sum">
+		<span class='b'>function</span> <span class='q'>sum</span>(){ <br>
+		<span class="g">// parseInt可以將字串轉為整數</span><br>
+		<span class='b'>document</span>.<span class='b'>getElementById</span>('<span class='y'>dy_ans</span>').innerHTML = <br>
+		<span class='b'>parseInt</span>(<span class='b'>document</span>.<span class='b'>getElementById</span>('<span class='y'>dy_num1</span>').<span class='b'>value</span>) + <br>
+		<span class='b'>parseInt</span>(<span class='b'>document</span>.<span class='b'>getElementById</span>('<span class='y'>dy_num2</span>').<span class='b'>value</span>);<br>
+		}</div>
+		&lt;/<span class='n'>script</span>&gt;<br><br>
+		&lt;<span class='n'>input</span> <span class='q'>type</span>="<span class='y'>number</span>" <span class='q'>value</span>="<span class='y'>0</span>" <span class='q'>id</span>="<span class='y'>dy_num1</span>" <span class='q'>onchange</span>="<span class='y' id='fun-sum2'>sum()</span>"&gt; + <br>
+		&lt;<span class='n'>input</span> <span class='q'>type</span>="<span class='y'>number</span>" <span class='q'>value</span>="<span class='y'>0</span>" <span class='q'>id</span>="<span class='y'>dy_num2</span>" <span class='q'>onchange</span>="<span class='y' id='fun-sum1'>sum()</span>"&gt; = <br>
+		&lt;<span class='n'>span</span> <span class='q'>id</span>="<span class='y'>dy_ans</span>"&gt;0&lt;/<span class='n'>span</span>&gt;<br>
+
+	</div>
+
+	<br>
+	<h2 class="ctitle2">其他範例</h2>
+	<ul class="clist">
+	<li><a href="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/DHTML_and_DOM/data/Startup_Examples/methods/method3/object_method.htm" target="_blank">點擊按鈕改變內容</a></li>
+	<li><a href="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/DHTML_and_DOM/data/Startup_Examples/methods/method5/object_method.htm" target="_blank">指標移動改變內容</a></li>
+	</ul>
+	<br><br><br><br>
+
+</div>
+</body>
+</html>

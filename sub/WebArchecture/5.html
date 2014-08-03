@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="c">
+	
+	<h1 class="ctitle">content-type</h1>
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+	<h2 class="ctitle2">簡介</h2>
+	<p class="ctxt">content-type是Web server及browser用來表示所傳送之內容的類型，Web 系統中引用MIME之標準表示content type。Web server及browser用MIME之content-type告訴對方所傳送之內容為何種資料類型</p>
+
+
+	<h2 class="ctitle2">常見的content-type</h2>
+	<ul class="clist"><li>text/plain</li><li>text/html</li><li>image/gif</li></ul>
+
+	<h2 class="ctitle2">由Server設定content-type</h2>
+	<p class="ctxt">對靜態內容之請求，Web Server依據所請求檔案之副檔名設定content-type，對動態內容之請求，Web Server端之應用程式，若必要，應依據其所回應給client請求之資料內容設定正確之content-type</p>
+	
+	<h2 class="ctitle2">經典範例</h2>
+	<p class="ctxt">下面將發出幾種不同資源請求，測試其返回的content-type</p><br>
+	<h3 class="ctitle3">一般網頁</h3>
+	<div class="ccode"> http://210.70.179.219/~srtsai/courses.htm </div>
+	<p class="ctxt">結果：Content-Type：text/html</p><br>
+
+	<h3 class="ctitle3">動態網頁</h3>
+	<div class="ccode">http://210.70.179.219/php/session_SID-p.php</div>
+	<p class="ctxt">結果：Content-Type：text/html</p><br>
+
+	<h3 class="ctitle3">圖片</h3>
+	<div class="ccode">http://210.70.179.219/wood.gif</div>
+	<p class="ctxt">結果：Content-Type：image/gif</p><br>
+
+	<h3 class="ctitle3">純文字檔</h3>
+	<div class="ccode">http://210.70.179.219/~srtsai/courses.txt</div>
+	<p class="ctxt">結果：Content-Type：text/plain</p><br>
+
+	<h2 class="ctitle2">測試工具</h2>
+	<p class="ctxt">您可以到Google Chrome的線上應用程式商店搜尋：</p><br>
+	<ul class="clist">
+	<li>Advanced REST client</li>
+	<li>Postman - REST Client</li>
+	</ul>
+	<br>
+	<br><br>
+	
+
+</div>
+
+</body>
+</html>

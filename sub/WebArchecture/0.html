@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="c">
+	
+	<h1 class="ctitle">Web的架構</h1>
+	
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+	<h2 class="ctitle2">主要構成的元素</h2>
+	<ul class="clist">
+		<li>Browser</li>
+		<li>Web Server</li>
+		<li>URL</li>
+		<li>HTTP</li>
+		<li>HTML</li>
+	</ul>
+
+	<h2 class="ctitle2">架構圖</h2>
+
+	<img class="cimg" src="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/Web%20Architecture/data/What%20is%20the%20overall%20architecture%20of%20the%20Web%20system/methods/method1/1.JPG">
+	<br><br>
+	<p class="ctxt">Web Server 基本上是提供儲存網頁之伺服器，用戶端如Browser透過通訊定HTTP向Web Server 請求網頁，若請求是一個靜態網頁，則Web Server直接從磁碟機讀取網頁後即可包裝成HTTP訊息回應用戶端的請求，若用戶端請求是對應一個Server端之應用程式，則該應用程式產生動態網頁內容後再透過Web Server傳回給用戶端。Web Server端開發應用程式之技術很多如早期CGI到目前較普遍的技術（如:ASP.NET，JSP，PHP等...）。
+	</p>
+	<br><br>
+	<p class="ctxt">
+	一個網頁內容以HTML語言描述，其中可包含各式各樣媒體。Browser程式通常支援擴充之機制叫plug-in或Add-on，以供設計者內嵌程式模組於Browser程式中，以使Browser能展現更多樣化的媒體格式或增加某些操作功能，如Flash Player，real player，Java plug-in等就是利用plug-in機制嵌入Browser中的程式模組。常用的Brower除了能連接Web Server外亦能連接其他的伺服器（如FTP Server）
+	</p>
+	<br><br><br><br>
+
+</div>
+
+</body>
+</html>

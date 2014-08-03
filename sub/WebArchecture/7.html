@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+	$(function(){
+		$('.ccode span').css('color', '#99CC33');
+		$('.q').css('color', '#CC99CC');
+	});
+
+	</script>
+</head>
+<body>
+
+<div id="c">
+	<h1 class="ctitle">Cookie是什麼</h1>
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+
+	<h2 class="ctitle2">簡介</h2>
+
+	<h3 class="ctitle3">因HTTP協定無狀態而生</h3>
+	<p class="ctxt">因HTTP協定為無狀態(stateless)之協定，基本上Web Server對client之請求不會留下狀態記錄，試想Web Server端之應用程式面對同時向它作請求之許多clients，如何分辨此次請求是來自那個client。針對此問題，HTTP協定中制定Cookie之機制</p><br>
+
+	<h3 class="ctitle3">紀錄資訊</h3>
+	<p class="ctxt">基本上cookie是用來記錄Web Server端應用程式之一些資訊，此資訊存放在瀏覽器端之電腦<br>
+	Web Server端之應用程式可利用 Cookie 之機制儲存一些資訊在使用者瀏覽器中(利用Set-Cookie:)<br>
+	這將使瀏覽器能記下一些資訊，以便往後再次請求相同之Web Server端應用程式時，
+	可附帶此資訊於請求訊息中(利用Cookie:)，Web Server 端應用程式就可取得原先存放在該使用者瀏覽器中之一些資訊<br>且所有的cookie都有時效限制，時間到了就自動消失</p><br>
+
+	<h3 class="ctitle3">Server端的應用</h3>
+	<p class="ctxt">Cookies要如何應用全由Web Server端之應用程式設計者決定，例如，Web Server端之應用程式或程式開發平台常利用cookie記錄session id，再利用session id 追蹤某使用者以及該使用者在執行某應用程式時所需之一些變數，這些變數即一般所謂之session variables</p><br>
+
+	<h3 class="ctitle3">安全性疑慮</h3>
+	<p class="ctxt">有些應用程式利用cookie記錄一些較有安全疑慮之資訊，如帳號密碼，因此有人擔心使用cookie會有安全疑慮</p><br>
+
+	<h2 class="ctitle2">Cookie的設定</h2>
+	<p class="ctxt">由Web Server端之應用程式設定cookie, Web Server 以Set-Cookie: 設定cookie於HTTP回應訊息中</p>
+	<div class="ccode"><span class='q'>Set-Cookie</span>: <span>NAME</span>=VALUE; <span>expires</span>=DATE; <span>path</span>=PATH; <span>domain</span>=DOMAIN_NAME;</div>
+
+	<ul class="clist">
+	<li>NAME=VALUE：定義cookies</li>
+	<li>expires=DATE：定義 cookies 之有效期</li>
+	<li>domain與path：定義 cookies 之有效範圍(那個server之那個應用)</li>
+	</ul>
+
+	<h2 class="ctitle2">若已存在Cookie，會自動回報Server</h2>
+	<p class="ctxt">瀏覽器在向 Web server 作請求時, 若有合於此server之有效cookie時會以Cookie: 回報cookie</p>
+	<div class="ccode"><span class='q'>Cookie</span>: <span>NAME</span>=VALUE;</div><br>
+
+	<h2 class="ctitle2">運作流程圖</h2>
+	<img class="cimg2" src="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/Web%20Architecture/data/What%20is%20a%20cookie/methods/method1/cookie.jpg">
+	<br><br><br>
+	
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<div id="c">
+	
+	<h1 class="ctitle">散落的相片</h1>
+
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+	
+
+	<h2 class="ctitle2">Demo：</h2>
+	<p class="ctxt">您可以拖拉相片改變位置，並使其置於其他相片的上方。</p>
+	<div class="cdemo">
+		
+		<style type="text/css">
+			.demo-img{
+				width: 200px;
+				height: auto;
+				position: absolute;
+				border: solid 8px #CCC;
+				background-color: #FFF;
+			}
+			.demo-box{
+				width: 100%;
+				height: 400px;
+				position: relative;
+				border: solid 1px #ccc;
+				overflow: hidden;
+			}
+			#demo1{left:60px; top:110px; 
+			transform:rotate(-45deg);
+			-webkit-transform:rotate(-45deg); 
+			}
+			#demo2{left:140px; top:60px;
+			transform:rotate(-15deg);
+			-webkit-transform:rotate(-15deg); 
+			}
+			#demo3{left:230px; top:230px;
+			transform:rotate(10deg);
+			-webkit-transform:rotate(10deg); 
+			}
+			#demo4{left:360px; top:110px;
+			transform:rotate(-25deg);
+			-webkit-transform:rotate(-25deg); 
+			}
+			#demo5{left:530px; top:140px;
+			transform:rotate(45deg);
+			-webkit-transform:rotate(45deg); 
+			}
+		</style>
+		
+		<script>
+
+		$(function(){
+
+			$( ".demo-img" ).draggable({
+
+		      start: function() {
+		      	$( ".demo-img" ).css('z-index', '0');
+		      	$(this).css({
+		      		zIndex: '1',
+		      		border: 'solid 8px #993333'
+		      	});
+		      },
+		      drag: function() {},
+		      stop: function() {
+		        $(this).css({border: 'solid 8px #CCC'});
+		      }
+
+		    });
+
+
+		});
+
+		</script>
+		
+		<div class="demo-box">
+		<img src="img/demo1.png" class="demo-img" id="demo1">
+		<img src="img/demo2.png" class="demo-img" id="demo2">
+		<img src="img/demo3.png" class="demo-img" id="demo3">
+		<img src="img/demo4.png" class="demo-img" id="demo4">
+		<img src="img/demo5.png" class="demo-img" id="demo5">
+		</div>
+
+	</div>
+	<br>
+
+	<h2 class="ctitle2">原始碼：</h2>
+	<p class="ctxt">你可以點選 HTML 、 CSS 或是 JacaScripct 來看到完整的程式碼。</p>
+	<br>
+	<iframe width="100%" height="400" src="http://jsfiddle.net/ZapLin/7C7jy/3/embedded/html,css,js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+	<br><br><br><br><br><br>
+
+</body>
+</html>

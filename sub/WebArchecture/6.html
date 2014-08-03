@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div id="c">
+
+	<h1 class="ctitle">造訪一個網頁</h1>
+
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+	<h2 class="ctitle2">運作過程</h2>
+
+	<p class="ctxt">瀏覽器必須執行一連串的動作才能將網頁讀取下來</p><br>
+
+	<ol class="clist">
+	<li>瀏覽器認知協定為HTTP，將以HTTP與伺服器作通訊</li>
+	<li>瀏覽器向DNS詢問Web server www.cjcu.edu.tw 之IP位址</li>
+	<li>DNS回應www.cjcu.edu.tw之IP位址為210.70.179.222</li>
+	<li>瀏覽器與Web server之TCP通訊埠80建立一個TCP connection</li>
+	<li>瀏覽器送出一個HTTP的請求訊息</li>
+	<li>www.cjcu.edu.tw伺服器回應一個HTTP的回應訊息 (Body 中含electric.htm 之網頁內容 )</li>
+	<li>TCP連結斷線</li>
+	<li>瀏覽器展現electric.htm 之網頁內容</li>
+	<li>若electric.htm中含有<IMG>標籤，瀏覽器重複以上動作將網頁中影像的部分取回並展現在螢幕中</li>
+	</ol>
+
+	<h2 class="ctitle2">流程圖</h2>
+	<img class="cimg" src="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/Web%20Architecture/data/Operations%20in%20accessing%20a%20Web%20page/methods/method1/8.JPG">
+
+	<br>
+
+	<h2 class="ctitle2">相關連結</h2>
+	<ul class="clist">
+	<li><a href="http://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D%E7%B3%BB%E7%BB%9F" target="_blank">DNS wikipedia</a></li>
+	<li><a href="http://zh.wikipedia.org/wiki/%E4%BC%A0%E8%BE%93%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AE" target="_blank">TCP wikipedia</a></li>
+	</ul>
+
+	<br><br><br>
+	
+	
+
+</div>
+
+</body>
+</html>

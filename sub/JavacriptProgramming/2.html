@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="c">
+	<h1 class="ctitle">JS物件模型</h1>
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+	<h2 class="ctitle2">簡介</h2>
+	<ul class="clist">
+	<li>Javascript language is object-based</li>
+	<li>An object is a language construct with properties</li>
+	<li>Properties are Javascript variables, they can be either other objects</li>
+	<li>Functions associated with an object are known as methods</li>
+	<li>A DOM object can be assigned to a Javascript variable</li>
+	<li>When you load a document in a browser, it creates a number of JavaScript objects with property values based on the HTML loaded.</li>
+	<li>The Object Hierarchy in a Browser window with a document loaded</li>
+	</ul>
+
+	<h2 class="ctitle2">JS物件模型階層圖</h2>
+	<p class="ctxt">當一個網頁被Web Browser載入到一個window中後，它將依網頁內容產生一些物件，下圖為早期JavaScript支援之階層式物件集合體，後來為HTML及XML文件之處理，W3C制定DOM(Document Object Model)之規格標準，規範一個HTML或XML文件為一個DOM tree，HTML或XML文件中每個元素(標籤)，每個元素之屬性及文字內容均是此DOM tree之物件，早期JavaScript支援之階層式物件集合體只是此DOM tree之子集合</p><br><br>
+	<img class="cimg2" src="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/Javascript/data/Basic%20object%20hierarchy/methods/method1/nav_hier.gif"><br><br>
+
+	<h2 class="ctitle2">JS基本的物件</h2>
+
+	<h3 class="ctitle3">navigator</h3>
+	<p class="ctxt">has properties for the name and version of the Browser being used, for the MIME types supported by the client, and for the plug-ins installed on the client</p>
+
+	<h3 class="ctitle3">window</h3>
+	<p class="ctxt">the top-level object; has properties that apply to the entire window. There is also a window object for each "child window" in a frames document</p>
+	
+	<h3 class="ctitle3">document</h3>
+	<p class="ctxt">contains properties based on the content of the document, such as title, background color, links, and forms</p>
+	
+	<h3 class="ctitle3">location</h3>
+	<p class="ctxt">has properties based on the current URL</p>
+	
+	<h3 class="ctitle3">history</h3>
+	<p class="ctxt">contains properties representing URLs the client has previously requested</p>
+	<br>
+	<h3 class="ctitle3">物件的屬性</h3>
+	<ul class="clist">
+	<li><a href="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/Javascript/data/Basic%20Objects%20in%20Every%20Page/methods/method1/window.htm" target="_blink">window</a></li>
+	<li><a href="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/Javascript/data/Basic%20Objects%20in%20Every%20Page/methods/method1/window.document.htm" target="_blink">document</a></li>
+	<li><a href="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/Javascript/data/Basic%20Objects%20in%20Every%20Page/methods/method1/window.navigator.htm" target="_blink">navigator</a></li>
+	<li><a href="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/Javascript/data/Basic%20Objects%20in%20Every%20Page/methods/method1/window.location.htm" target="_blink">location</a></li>
+	</ul><br>
+
+	<h3 class="ctitle3">物件的方法</h3>
+	<ul class="clist">
+	<li><a href="http://210.70.179.219/Lecture_Objects/data/InternetComputing-Objects/data/Javascript/data/Methods%20defined%20for%20Window%20Objects/methods/method1/object_method.htm" target="_blink">window</a></li>
+	</ul>
+
+	<br><br><br><br><br>
+
+</div>
+
+</body>
+</html>

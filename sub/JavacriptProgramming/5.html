@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		$(function(){
+		$('.q').css('color', '#99CC33');
+		$('.n').css('color', '#FF6666');
+		$('.y').css('color', '#99CCFF');
+		$('.s').css('color', '#FFCC33');
+
+		
+	});
+	</script>
+</head>
+<body>
+
+<div id="c">
+
+	<h1 class="ctitle">JS Function</h1>
+	<span class="ctime">最後修改：<span id="ct"></span><img src='img/line1.png' onload="document.getElementById('ct').innerHTML=document.lastModified.split(' ')[0];" style="display:none"></span>
+
+	<h2 class="ctitle2">自訂 JS Function</h2>
+	<p class="ctxt">首先必須使用關鍵字 function 接著為其命名，並撰寫其要做的事情，往後便可重複呼叫該 function 以利程式撰寫</p>
+
+	<div class="ccode">       
+        myfunc("<span class="s">hi~~~~</span>"); <br><br>
+		<span class="y">function</span> <span class="q">myfunc</span>(<span class="n">arg</span>){ <br><br>
+			<span class="y">alert</span>(arg); <br><br>
+		}<br>
+	</div><br>
+
+
+	<h2 class="ctitle2">完整程式碼</h2>
+	<div class="ccode">
+
+		&lt;!DOCTYPE HTML&gt;<br><br>
+		&lt;<span class="n">html</span>&gt;<br>
+		    &lt;<span class="n">head</span>&gt;<br><br>
+		    &lt;<span class="n">title</span>>Hello World&lt;/<span class="n">title</span>&gt;<br><br><br>
+		        &lt;<span class="n">script</span> <span class="q">type</span>="<span class="s">text/javascript</span>"&gt; <br><br>
+		            
+		        myfunc("<span class="s">hi~~~~</span>"); <br><br>
+				<span class="y">function</span> <span class="q">myfunc</span>(<span class="n">arg</span>){ <br><br>
+					<span class="y">alert</span>(arg); <br><br>
+				}<br><br>
+
+		        &lt;/<span class="n">script</span>&gt;<br><br><br>
+		    &lt;/<span class="n">head</span>&gt;<br><br>
+		    &lt;<span class="n">body</span>&gt;<br>
+				&nbsp;&nbsp;HTML 內文……<br>
+		    &lt;/<span class="n">body</span>&gt;<br><br>
+		&lt;/<span class="n">html</span>&gt; 
+
+	</div><br><br><br><br>
+	
+	
+	
+
+</body>
+</html>
