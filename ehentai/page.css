@@ -1,0 +1,139 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 微軟正黑體;
+}
+
+
+.page{
+	padding-top: 25px;
+	text-align: center;
+}
+.box{
+	margin: 0.5%;
+	-webkit-box-sizing: border-box;
+ 	box-sizing: border-box;
+ 	float: left;
+	width:32.3%;
+	height: 500px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.boximg{
+	width: 100%;
+	height: auto;
+	background-color:#B7B9AC;
+}
+.boxtext{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: right;
+}
+.boxtext:before{
+	content: '';
+	display: inline-block;
+	height: 100%;
+	width: 0;
+	vertical-align: bottom;
+}
+
+.inbox{
+	line-height: 25px;
+	word-break: break-all;
+	display: inline-block;
+	width: 100%;
+	vertical-align: bottom;
+	padding-top: 5px;
+	padding-bottom: 3px;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.7))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
+}
+
+.searchbar{
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index: 6;
+	opacity: 0.5;
+	top:0;
+	padding: 5px;
+}
+.searchbar:hover{
+	opacity: 1;
+}
+.searchbar input[type=text]{
+	width: 60%;
+	height: 30px;
+	font-size: 25px;
+}
+.searchbar input[type=button]{
+	height: 34px;
+	font-size: 25px;
+}
+
+
+.page2{
+	height: 400px;
+	background-color: #ace;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 8;
+	top: 0;
+	overflow: auto;
+}
+
+.changepagebar{
+	text-align: center;
+	font-size: 25px;
+	margin-top: 200px;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	z-index: 7;
+	opacity: 0.5;
+}
+.changepagebar:hover{
+	opacity: 1;
+}
+.changepagebar span{
+	padding: 10px;
+}
+
+.bookimg{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0px;
+}
+
+.colsepages{
+	position: fixed;
+	font-size: 30px;
+	opacity: 0.7;
+	z-index: 10;
+	width: 100%;
+	top:0;
+	text-align: right;
+	text-shadow: 1px 1px #666;
+	color: #FFF;
+}
+
+#loading{
+	font-size: 50px;
+	display: inline-block;
+	background-color: #000;
+}
+
+
