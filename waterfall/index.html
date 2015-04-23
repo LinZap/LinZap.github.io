@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Waterfall-Light Demo</title>
+	<style type="text/css">
+		*{margin: 0; padding:0;}
+		body{padding:20px;}
+	</style>
+</head>
+<body>
+	
+	<div id="box"></div>
+
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="waterfall-light.js"></script>
+	<script>
+
+		$(function(){
+			var box = $('#box');
+			for(var i=0;i<50;i++){
+				var card = $('<div>').addClass('card').css({
+					height: Math.floor((Math.random() * 100) + 100)+"px",
+					background: '#ace'
+				}); box.append(card);
+			}
+
+
+
+
+			// useage: fallow below
+
+			$('#box').waterfall();
+
+
+		});
+	</script>
+</body>
+</html>
